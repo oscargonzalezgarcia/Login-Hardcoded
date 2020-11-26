@@ -116,20 +116,8 @@
     </div>
 </body>
 <?php
-
-    define('CORREUS',[
-        '0'       => 'admin@educem.com',
-        '1'       => 'donald@educem.com',
-        '2'       => 'gilete@educem.com',
-        '3'       => 'gon@educem.com',
-    ]);
-
-    define('PASSWORDS',[
-        '0'       => 'iloveu',
-        '1'       => 'm4k3Am3r1caGr3atAg41n!',
-        '2'       => 'ErF4ryS1empr3',
-        '3'       => 'Fatality!',
-    ]);
+    require_once("./correus.php");
+    require_once("./passwords.php");
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         $email = base64_decode($_POST["email"]);
